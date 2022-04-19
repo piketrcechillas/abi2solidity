@@ -45,8 +45,7 @@
     "clean": "del dist",
     "coverage": "yarn test -- --coverage",
     "preversion": "yarn lint && yarn test && yarn build",
-    "prepublish": "yarn lint && yarn test && yarn build",
-    "postinstall": "cd ./ && yarn && yarn build"
+    "prepublish": "yarn lint && yarn test && yarn build"
   },
   "eslintConfig": {
     "extends": "airbnb",
