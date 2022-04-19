@@ -1,26 +1,38 @@
 #!/usr/bin/env node
+"use strict";
 
-import commander from 'commander';
-import { version } from '../package.json';
-import { ABI2SolidityFiles } from './abi2solidity';
+var _commander = require("commander");
+
+var _commander2 = _interopRequireDefault(_commander);
+
+var _package = require("../package.json");
+
+var _abi2solidity = require("./abi2solidity");
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
 
 function main() {
-  commander
-    .version(version)
-    .option('-i, --input <file>', 'JSON ABI Input file', '')
-    .option('-o, --output <file>', 'Solidity output file', '')
+  _commander2.default
+    .version(_package.version)
+    .option("-i, --input <file>", "JSON ABI Input file", "")
+    .option("-o, --output <file>", "Solidity output file", "")
     .parse(process.argv);
 
-  if (commander.input === '') {
-    console.log('Using stdin to READ ABI');
-    commander.input = process.stdin.fd;
+  if (_commander2.default.input === "") {
+    console.log("Using stdin to READ ABI");
+    _commander2.default.input = process.stdin.fd;
   }
 
-  if (commander.output === '') {
-    console.log('Using stdout to write Solidity interface');
+  if (_commander2.default.output === "") {
+    console.log("Using stdout to write Solidity interface");
   }
 
-  ABI2SolidityFiles(commander.input, commander.output);
+  (0, _abi2solidity.ABI2SolidityFiles)(
+    _commander2.default.input,
+    _commander2.default.output
+  );
 }
 
 main();
