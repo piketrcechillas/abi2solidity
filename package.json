@@ -46,7 +46,7 @@
     "coverage": "yarn test -- --coverage",
     "preversion": "yarn lint && yarn test && yarn build",
     "prepublish": "yarn lint && yarn test && yarn build",
-    "postinstall": "cd ./node_modules/abi2solidity && npm install && npm run build"
+    "postinstall": "npm install && npm run build"
   },
   "eslintConfig": {
     "extends": "airbnb",
