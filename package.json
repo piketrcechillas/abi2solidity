@@ -46,7 +46,7 @@
     "coverage": "yarn test -- --coverage",
     "preversion": "yarn lint && yarn test && yarn build",
     "prepublish": "yarn lint && yarn test && yarn build",
-    "postinstall": "yarn && yarn run build"
+    "postinstall": "cd ./ && yarn && yarn build"
   },
   "eslintConfig": {
     "extends": "airbnb",
