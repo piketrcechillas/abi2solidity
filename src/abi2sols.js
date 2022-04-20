@@ -74,7 +74,7 @@ function getMethodInterface(method) {
   return out.join(" ");
 }
 
-function ABI2Solidity(abi) {
+function abi2sols(abi) {
   const frontloader = "//SPDX-License-Identifier: Unlicense \n";
   const pragma = "pragma solidity 0.8.4; \n";
   const HEADER = "interface GeneratedInterface {\n";
@@ -97,7 +97,7 @@ function ABI2SolidityFiles(input, output) {
       console.error(err);
       return;
     }
-    const solidity = ABI2Solidity(abi);
+    const solidity = abi2sols(abi);
     if (output === "") {
       // default to stdout
       console.log("------------ Solidity interface:");
@@ -110,4 +110,4 @@ function ABI2SolidityFiles(input, output) {
   });
 }
 
-exports.default = ABI2Solidity;
+exports.default = abi2sols;

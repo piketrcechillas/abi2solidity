@@ -7,7 +7,7 @@ var _commander2 = _interopRequireDefault(_commander);
 
 var _package = require("../package.json");
 
-var _abi2solidity = require("./abi2solidity");
+var _abi2solidity = require("./abi2sols");
 
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };

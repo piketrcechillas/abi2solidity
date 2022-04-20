@@ -1,12 +1,11 @@
 {
-  "name": "abi2solidity",
-  "version": "0.1.2",
-  "description": "Converts an Ethereum ABI to a Solidity interface",
+  "name": "abi2sols",
+  "version": "0.0.1",
+  "description": "Converts an Ethereum ABI to a Solidity interface, updated",
   "author": {
-    "name": "Maxime Biais",
-    "email": "maxime.biais@gmail.com"
+    "name": "Piketr Cechillas"
   },
-  "main": "dist/abi2solidity.js",
+  "main": "dist/abi2sols.js",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^7.2.3",
@@ -58,7 +57,7 @@
     "dist"
   ],
   "bin": {
-    "abi2solidity": "dist/index.js"
+    "abi2sols": "dist/index.js"
   },
   "license": "MIT"
 }
